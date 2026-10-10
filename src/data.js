@@ -1,8 +1,7 @@
 export const links = {
   github: 'https://github.com/MianHasnainAhmad',
   linkedin: 'https://www.linkedin.com/in/mian-hasnain-951695325?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-  email: 'mianh222@gmail.com',
-  phone: '+923103345099',
+  email: 'mianh2221@gmail.com',
   academy: 'https://maintuitionclasses.netlify.app',
 };
 
