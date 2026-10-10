@@ -1,57 +1,47 @@
 # Mian Hasnain Ahmad — Portfolio
 
-A responsive personal portfolio built with React and Vite. It includes a mobile navigation menu, light/dark theme toggle, reusable project and section components, smooth scrolling, and a contact-form interaction.
+My personal portfolio, built with React and Vite. It presents my education, teaching experience, skills and projects, and makes it easy for recruiters to contact me.
+
+## What's on the site
+
+- **Hero and at-a-glance facts**: who I am, what I'm looking for, and my degree, experience and projects in one strip
+- **About, Skills, Projects, Education & experience**: written with real details, and every project links to its source code
+- **Contact**: email, LinkedIn and GitHub, plus a form that opens the visitor's email app with the message ready to send
+- **Responsive layout** with a mobile menu and a light/dark theme toggle
+- **Accessibility and SEO basics**: skip link, visible keyboard focus, reduced-motion support, page title and description, social preview tags, favicon and structured data
+
+## Tech
+
+React · Vite · plain CSS · deployed on Netlify
 
 ## Run locally
 
 1. Install [Node.js LTS](https://nodejs.org/).
-2. Open this folder in VS Code.
-3. Open the VS Code terminal and run:
+2. In this folder, run:
 
    ```bash
    npm install
    npm run dev
    ```
 
-4. Open the address shown in the terminal (usually `http://localhost:5173`).
+3. Open the address shown in the terminal (usually `http://localhost:5173`).
 
-## Build for deployment
+## Build for production
 
 ```bash
 npm run build
 ```
 
-This creates the production-ready `dist` folder.
+This creates the `dist` folder. Netlify builds it automatically using `netlify.toml` (build command `npm run build`, publish directory `dist`).
 
-## Publish to GitHub
+## Where to edit the content
 
-1. Create an empty GitHub repository, for example `mian-portfolio`.
-2. In this project folder, run:
+- `src/data.js`: links, at-a-glance facts, skills, projects, education and experience
+- `src/App.jsx`: the hero, about and contact text
+- `src/styles.css`: all styling and responsive rules
+- `public/profile.jpeg`: profile photo
+- `index.html`: page title, description and social tags
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Create personal portfolio"
-   git branch -M main
-   git remote add origin https://github.com/MianHasnainAhmad/mian-portfolio.git
-   git push -u origin main
-   ```
+## Contact
 
-   Replace the repository URL if you choose a different repository name.
-
-## Deploy on Netlify
-
-1. Sign in to [Netlify](https://app.netlify.com/).
-2. Choose **Add new site** → **Import an existing project** → **GitHub**.
-3. Select the portfolio repository.
-4. Use these build settings:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-5. Select **Deploy site**. Netlify will provide the live URL.
-
-## Files to customize
-
-- `src/data.js` contains external links, skills, and project information.
-- `src/App.jsx` contains the written portfolio content and timeline.
-- `public/profile.jpeg` is the profile photo.
-- `src/styles.css` contains all visual styling and responsive layout rules.
+[LinkedIn](https://www.linkedin.com/in/mian-hasnain-951695325) · [GitHub](https://github.com/MianHasnainAhmad)
