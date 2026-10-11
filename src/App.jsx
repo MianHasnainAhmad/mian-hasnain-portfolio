@@ -3,7 +3,7 @@ import Header from './components/Header';
 import SectionTitle from './components/SectionTitle';
 import ProjectCard from './components/ProjectCard';
 import ContactForm from './components/ContactForm';
-import { links, facts, skillGroups, projects, timeline } from './data';
+import { links, facts, skillGroups, projects, timeline, certifications } from './data';
 
 export default function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -31,6 +31,7 @@ export default function App() {
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">View projects <span>→</span></a>
               <a className="button button-plain" href="#contact">Contact me</a>
+              <a className="button button-plain" href={links.cv} download>Download CV <span>↓</span></a>
             </div>
             <div className="social-row">
               <a href={links.github} target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -59,7 +60,7 @@ export default function App() {
             </SectionTitle>
             <div className="about-copy">
               <p>
-                I’m a Software Engineering student at Abdul Wali Khan University, Mardan. I build responsive interfaces with HTML, CSS, JavaScript and React, and I’m now learning backend development so I can build complete applications from the database to the screen.
+                I’m a Computer Science (Software Engineering) student at Abdul Wali Khan University, Mardan. I build responsive interfaces with HTML, CSS, JavaScript and React, and I’m now learning backend development so I can build complete applications from the database to the screen.
               </p>
               <p>
                 Outside class I run Mian Tuition Academy in Nowshera Kalan, where I’ve taught for more than four years and built the academy’s website myself. Teaching keeps me patient, organised and focused on the person using what I make, and I bring the same habits to my code.
@@ -115,6 +116,14 @@ export default function App() {
               </article>
             ))}
           </div>
+          <div className="container certs">
+            <h3 className="certs-title">Certifications</h3>
+            <ul>
+              {certifications.map(([name, issuer]) => (
+                <li key={name}><strong>{name}</strong><span>{issuer}</span></li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <section className="section contact-section" id="contact">
@@ -127,6 +136,7 @@ export default function App() {
                 <a href={`mailto:${links.email}`}><span>Email</span>{links.email}</a>
                 <a href={links.linkedin} target="_blank" rel="noreferrer"><span>LinkedIn</span>Connect with me ↗</a>
                 <a href={links.github} target="_blank" rel="noreferrer"><span>GitHub</span>MianHasnainAhmad ↗</a>
+                <a href={links.cv} download><span>Resume</span>Download my CV (PDF) ↓</a>
                 <p className="contact-location"><span>Location</span>{links.location}</p>
               </div>
             </div>
